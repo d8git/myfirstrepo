@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Get Code') {
+            steps {
+                echo 'Getting code from Git'
+            }
+        }
+
+        stage('Build Mendix App') {
+            steps {
+                echo 'Here Mendix app will be built'
+            }
+        }
+    }
+}
