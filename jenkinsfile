@@ -1,17 +1,14 @@
 pipeline {
     agent any
 
+    triggers {
+        githubPush()
+    }
+
     stages {
-
-        stage('Get Code') {
+        stage('Test') {
             steps {
-                echo 'Getting code from Git'
-            }
-        }
-
-        stage('Build Mendix App') {
-            steps {
-                echo 'Here Mendix app will be built'
+                echo 'Triggered'
             }
         }
     }
